@@ -1,0 +1,37 @@
+﻿<Window x:Class="_1Task.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1Task"
+        mc:Ignorable="d"
+        Title="leanerList" Height="450" Width="800">
+    <Grid  Background="#f2f2f2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="Инструкция:" Margin="5"/>
+            <TextBlock Text="Линейный список. Можно добавлять элемент в список, удалять по названию элемента, получать элемент по индексу и очищать полностью" Margin="5"/>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBox x:Name="tbNewItem" Width="200"/>
+                <Button Click="AddItem_Click" Content="Add" Width="100" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBox x:Name="tbNewItem1" Width="200"/>
+                <Button Click="DeleteItem_Click" Content="Delete by name" Width="100" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBox x:Name="tbGetItem" Width="50"/>
+                <Button Click="IncreaseIndex_Click" Content="▲" Width="25" Margin="5"/>
+                <Button Click="DecreaseIndex_Click" Content="▼" Width="25" Margin="5"/>
+                <Button Click="GetItem_Click" Content="Get by index" Width="100" Margin="5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Button Click="ClearItem_Click" Content="Clear" Width="100" Margin="5"/>
+            </StackPanel>
+            <ListBox x:Name="lbMain"/>
+        </StackPanel>
+    </Grid>
+</Window>
